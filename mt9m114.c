@@ -1508,7 +1508,8 @@ static int mt9m114_wait_num_frames(struct v4l2_subdev *sd, u16 numFrames)
 static void mt9m114_uvc_out_of_sync(struct mt9m114_info* pInfo) 
 {
 
-    for(int i = 0; i < NUM_OF_UVC_REGISTERS; ++i)
+    int i;
+    for(i = 0; i < NUM_OF_UVC_REGISTERS; ++i)
     {
         pInfo->uvc_register_out_of_sync[i] = true;
     }
